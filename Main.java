@@ -7,6 +7,7 @@ public class Main {
         TicketSystem ts = new TicketSystem();
         // Thread for adding tickets
         //https://stackoverflow.com/questions/3489543/how-to-call-a-method-with-a-separate-thread-in-java
+        //https://stackoverflow.com/questions/34434543/how-to-run-two-threads-at-the-same-time-in-java
         new Thread(() -> { // Just realized this is lambda expression
             while (ts.cumulativeTime < 20) { // Simulate for a duration of 20 units of time
                 ts.addTicket();
