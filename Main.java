@@ -11,7 +11,7 @@ public class Main {
         new Thread(() -> { // Just realized this is lambda expression
             while (ts.cumulativeTime < 20) { // Simulate for a duration of 20 units of time
                 ts.addTicket();
-                ts.cumulativeTime++; // Otherwise oftentimes new ticket add and process can happen at the same time
+                ts.cumulativeTime++; // Otherwise it won't end
                 try {
                     Thread.sleep(500); // Wait for 500 milliseconds before adding the next ticket
                 } catch (InterruptedException e) {
