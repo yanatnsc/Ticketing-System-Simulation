@@ -21,11 +21,11 @@ public class Main {
 
         // Thread for processing tickets
         new Thread(() -> {
-            while (ts.cumulativeTime < 30) { // Simulate for a duration of 50 units of time (processing will be completed after last ticket is submitted)
+            while (ts.cumulativeTime < 30) { // Simulate for a duration of 30 units of time (processing will be completed after last ticket is submitted)
                 ts.processTicket();
                 ts.cumulativeTime++;
                 try {
-                    Thread.sleep(750); // Wait for 700 milliseconds before processing the next ticket
+                    Thread.sleep(750); // Wait for 750 milliseconds before processing the next ticket
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
